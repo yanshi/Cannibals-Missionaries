@@ -1,0 +1,31 @@
+Java implicitly associate monitors to each Object. However, this program explicitly shows the stucture of a monitor by taking advantages of Lock and Conditions.
+
+Premise
+1, Missionaries and Cannibals arrive at a river bank and want to cross the river by boat.
+2, A boat can carry at most 3 people.
+3, There is an exact amount of boats on the river bank to carry everyone across, i.e. 1 boat for 3 people, 2 boats for 6 people, etc.
+4, Only one boat is allowed on the river at any given time, i.e. a boat must reach the other side of the  river bank before another can leave. Boats never return.
+5, A boat must carry more missionaries than cannibals, otherwise the missionaries will be eaten at midstream.
+6, Unlike the tradional problem, cannibals only eat missionaries midstream (i.e. they don’t eat missionaries on the river bank).
+
+Goal
+1, Write a multi-threaded program that organises Missionaries and Cannibals as they arrive into full boat loads, such that everyone makes it to the other side of the river.
+2, There should be no'undue waiting': Missionaries and Cannibals should not wait if there is enough to make a safe boat load.
+
+Sample input:
+5 4
+Cannibal 1
+Missionary 1
+Cannibal 2
+Missionary 2
+Missionary 3
+Cannibal 3
+Missionary 4
+Cannibal 4
+Cannibal 5
+
+output
+Boat leaving with Cannibal 1, Missionary 1, and Missionary 2
+Boat leaving with Cannibal 2, Missionary 3, and Missionary 4
+Boat leaving with Cannibal 3, Cannibal 4, and Cannibal 5
+
