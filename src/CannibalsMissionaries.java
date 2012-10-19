@@ -211,11 +211,7 @@ public class CannibalsMissionaries {
 		missionaries = Integer.parseInt(st.nextToken());
 		
 		
-		if(cannibals>=3){
-			allcannibalspermit = true;
-		} else {
-			allcannibalspermit = false;
-		}
+		
 		
 		String data = input.readLine();
 		while(!data.equals("")){
